@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: development
+  main:
+    banner-mode: "off"
+  application:
+    name: reactive-spring-poc
+  r2dbc:
+    url: r2dbc:mariadb://localhost:3306/dev
+    username: root
+    password: password
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+server:
+  port: 8080
+  http2:
+    enabled: true
+
+logging:
+  level:
+    ALL: DEBUG
+
+debug: true
